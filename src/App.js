@@ -18,7 +18,8 @@ export default function App() {
       cost: values.cost,
       category: values.category,
       resumo: values.resumo,
-    }).then(() => {
+    }).then((res) => {
+      console.log(res);
       Axios.post("https://crudhugo.herokuapp.com/search", {
         name: values.name,
         cost: values.cost,
