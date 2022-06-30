@@ -24,7 +24,7 @@ export default function Card(props) {
         <p className="card-id">{props.id}</p>
         <CardText className="">{props.category}</CardText>
         <CardText className="">{props.resumo}</CardText>
-        <CardText className="">R${props.cost}</CardText>
+        <CardText className=""><b>R${props.cost}</b></CardText>
       </div>
     </>
   );
