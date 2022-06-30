@@ -168,7 +168,6 @@ export default function App() {
 
       </div>
       <p>{nameVal} {costVal}</p>
-      <div class="col-md-8">
         <div class="alinhamento">
           {listCard.map((val) => (
 
@@ -185,8 +184,7 @@ export default function App() {
 
           ))}
         </div>
-      </div>
-    </div >
+    </div>
 
   );
 }
