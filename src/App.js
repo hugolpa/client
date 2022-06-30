@@ -51,22 +51,22 @@ export default function App() {
       [value.target.name]: value.target.value,
     }));
   };
-// validações
+  // validações
   const [values, setValues] = React.useState({
     name: '',
     cost: '',
-    
+
   })
 
   const [validations, setValidations] = React.useState({
     name: '',
     cost: '',
-    
+
   })
 
   const validateAll = () => {
-    const { name,cost } = values
-    const validations = { name: '', cost:''}
+    const { name, cost } = values
+    const validations = { name: '', cost: '' }
     let isValid = true
 
     if (!name) {
@@ -105,7 +105,7 @@ export default function App() {
     if (value && name === 'name' && (value.length < 3 || value.length > 50)) {
       message = 'Nome deve ter de 3 a 50 caracteres'
     }
-    
+
 
 
     setValidations({ ...validations, [name]: message })
@@ -115,7 +115,7 @@ export default function App() {
     const { name, value } = e.target
     setValues({ ...values, [name]: value })
   }
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -130,7 +130,7 @@ export default function App() {
     /* setTimeout(function(){
       window.location.reload();
     }); */
-    
+
     // alert(JSON.stringify(values))
   }
 
@@ -139,7 +139,7 @@ export default function App() {
   const {
     name: nameVal,
     cost: costVal,
-    
+
   } = validations
 
 
@@ -150,13 +150,13 @@ export default function App() {
 
           <div class="alinhamento">
             <h1 className="card-title text-center">Hugo´s games recorder</h1>
-            
-              <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-25 mt-2 " onChange={handleaddValues} />
-              <Input type="number" placeholder="Preço"  name="cost" value={cost} onBlur={validateOne} className=" w-25 mt-2" onChange={handleaddValues} />
-              <Input type="text" placeholder="Categoria" name="category"  className="w-25 mt-2" onChange={handleaddValues} />
-              <Input type="text" placeholder="Resumo" name="resumo" className="w-25 mt-2" onChange={handleaddValues} />
-            
-            
+
+            <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-25 mt-2 " onChange={handleaddValues} />
+            <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-25 mt-2" onChange={handleaddValues} />
+            <Input type="text" placeholder="Categoria" name="category" className="w-25 mt-2" onChange={handleaddValues} />
+            <Input type="text" placeholder="Resumo" name="resumo" className="w-25 mt-2" onChange={handleaddValues} />
+
+
 
           </div>
           <div className="text-center mt-4">
@@ -165,25 +165,26 @@ export default function App() {
 
 
         </div>
-        
+
       </div>
       <p>{nameVal} {costVal}</p>
-      
-      <div class="alinhamento">
-        {listCard.map((val) => (
+      <div class="col-md-8">
+        <div class="alinhamento">
+          {listCard.map((val) => (
 
-          <Card
+            <Card
 
-            listCard={listCard}
-            setListCard={setListCard}
-            key={val.games} id={val.id}
-            name={val.name}
-            cost={val.cost}
-            category={val.category}
-            resumo={val.resumo}
-          />
+              listCard={listCard}
+              setListCard={setListCard}
+              key={val.games} id={val.id}
+              name={val.name}
+              cost={val.cost}
+              category={val.category}
+              resumo={val.resumo}
+            />
 
-        ))}
+          ))}
+        </div>
       </div>
     </div >
 
