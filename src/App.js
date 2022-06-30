@@ -127,9 +127,9 @@ export default function App() {
     // executa a handleRegisterGame
     handleRegisterGame();
     document.getElementById("botao").disabled = true;
-    setTimeout(function(){
+    /* setTimeout(function(){
       window.location.reload();
-    });
+    }); */
     
     // alert(JSON.stringify(values))
   }
