@@ -149,7 +149,7 @@ export default function App() {
         <div className="card-body">
 
           <div class="alinhamento">
-            <h1 className="card-title text-center">Hugo´s games recorder teste</h1>
+            <h1 className="card-title text-center">Hugo´s games recorder</h1>
             
               <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-25 mt-2 " onChange={handleaddValues} />
               <Input type="number" placeholder="Preço"  name="cost" value={cost} onBlur={validateOne} className=" w-25 mt-2" onChange={handleaddValues} />
