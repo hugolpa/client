@@ -70,16 +70,16 @@ export default function App() {
     let isValid = true
 
     if (!name) {
-      validations.name = 'Nome é requerido'
+      validations.name = <b className="textoVal">Nome é requerido</b>
       isValid = false
     }
 
     if (name && name.length < 3 || name.length > 50) {
-      validations.name = 'Nome pode ter de 3 a 50 caracteres'
+      validations.name = <b className="textoVal">Nome pode ter de 3 a 50 caracteres</b>
       isValid = false
     }
     if (!cost) {
-      validations.cost = 'Preço é requerido'
+      validations.cost = <b className="textoVal">Preço é requerido</b>
       isValid = false
     }
 
@@ -99,11 +99,11 @@ export default function App() {
     let message = ''
 
     if (!value) {
-      message = `${name} é requerido`
+      message = <b className="textoVal">${name} é requerido</b>
     }
 
     if (value && name === 'name' && (value.length < 3 || value.length > 50)) {
-      message = 'Nome deve ter de 3 a 50 caracteres'
+      message = <b className="textoVal">Nome deve ter de 3 a 50 caracteres</b>
     }
 
 
@@ -111,10 +111,10 @@ export default function App() {
     setValidations({ ...validations, [name]: message })
   }
 
-  const handleChange = (e) => {
+  /*const handleChange = (e) => {
     const { name, value } = e.target
     setValues({ ...values, [name]: value })
-  }
+  }*/
 
   const handleSubmit = (e) => {
     e.preventDefault()

@@ -40,6 +40,10 @@
   align-items: center;
   flex-direction: column;
 }
+/*fundo vermelho texto validação*/
+.textoVal{
+  background: #eb0606
+}
 /* gradiente fundo */
 html, body {
   width: 100%;
