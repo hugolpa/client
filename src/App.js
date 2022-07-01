@@ -150,7 +150,8 @@ export default function App() {
 
           <div class="alinhamento">
             <h1 className="card-title text-center">Hugo´s games recorder</h1>
-
+            <h6>Preencha as informações para cadastrar o game</h6>
+            <h6>Fill the blanked for record the game</h6>
             <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-75 mt-2 " onChange={handleaddValues} />
             <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-75 mt-2" onChange={handleaddValues} />
             <Input type="text" placeholder="Categoria" name="category" className="w-75 mt-2" onChange={handleaddValues} />
@@ -167,23 +168,27 @@ export default function App() {
         </div>
 
       </div>
+
       <p>{nameVal} {costVal}</p>
-        <div class="alinhamento">
-          {listCard.map((val) => (
+      <div class="alinhamento">
+        <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
+        <h6>Below have a list of recorded games, on click is possible edit/save, delete the datas</h6>
+        
+        {listCard.map((val) => (
 
-            <Card
+          <Card
 
-              listCard={listCard}
-              setListCard={setListCard}
-              key={val.games} id={val.id}
-              name={val.name}
-              cost={val.cost}
-              category={val.category}
-              resumo={val.resumo}
-            />
+            listCard={listCard}
+            setListCard={setListCard}
+            key={val.games} id={val.id}
+            name={val.name}
+            cost={val.cost}
+            category={val.category}
+            resumo={val.resumo}
+          />
 
-          ))}
-        </div>
+        ))}
+      </div>
     </div>
 
   );
