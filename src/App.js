@@ -152,9 +152,9 @@ export default function App() {
             <h1 className="card-title text-center">Hugo´s games recorder</h1>
             <h6>Preencha as informações para cadastrar o game</h6>
             <h6>Fill the blanked for record the game</h6>
-            <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-75 mt-2 " onChange={handleaddValues} />
-            <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-75 mt-2" onChange={handleaddValues} />
-            <Input type="text" placeholder="Categoria" name="category" className="w-75 mt-2" onChange={handleaddValues} />
+            <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
+            <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-50 mt-2" onChange={handleaddValues} />
+            <Input type="text" placeholder="Categoria" name="category" className="w-50 mt-2" onChange={handleaddValues} />
             <Input type="text" placeholder="Resumo" name="resumo" className="w-75 mt-2" onChange={handleaddValues} />
 
 
