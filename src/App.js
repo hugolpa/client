@@ -4,6 +4,7 @@ import Axios from "axios";
 import Card from "./components/cards/cards";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Input } from 'reactstrap';
+
 // trabalhando com o git 2
 export default function App() {
 
@@ -141,55 +142,55 @@ export default function App() {
     cost: costVal,
 
   } = validations
+ 
+    return (
+      <div className="container mt-4">
+        <div className="card">
+          <div className="card-body">
+
+            <div class="alinhamento">
+              <h1 className="card-title text-center">Hugo´s games recorder</h1>
+              <h6>Preencha as informações para cadastrar o game</h6>
+              <h6>Fill the blanked for record the game</h6>
+              <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
+              <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-50 mt-2" onChange={handleaddValues} />
+              <Input type="text" placeholder="Categoria" name="category" className="w-50 mt-2" onChange={handleaddValues} />
+              <Input type="text" placeholder="Resumo" name="resumo" className="w-75 mt-2" onChange={handleaddValues} />
 
 
-  return (
-    <div className="container mt-4">
-      <div className="card">
-        <div className="card-body">
 
-          <div class="alinhamento">
-            <h1 className="card-title text-center">Hugo´s games recorder</h1>
-            <h6>Preencha as informações para cadastrar o game</h6>
-            <h6>Fill the blanked for record the game</h6>
-            <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
-            <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-50 mt-2" onChange={handleaddValues} />
-            <Input type="text" placeholder="Categoria" name="category" className="w-50 mt-2" onChange={handleaddValues} />
-            <Input type="text" placeholder="Resumo" name="resumo" className="w-75 mt-2" onChange={handleaddValues} />
+            </div>
+            <div className="text-center mt-4">
+              <Button id="botao" type="submit" onClick={handleSubmit} className="btn-success mt-4"> Cadastrar </Button>
+            </div>
 
-
-
+            
           </div>
-          <div className="text-center mt-4">
-            <Button id="botao" type="submit" onClick={handleSubmit} className="btn-success mt-4"> Cadastrar </Button>
-          </div>
-
 
         </div>
 
+        <p>{nameVal} {costVal}</p>
+        <div class="alinhamento">
+          <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
+          <h6>Below have a list of recorded games, on click is possible edit/save, delete the datas</h6>
+
+          {listCard.map((val) => (
+
+            <Card
+
+              listCard={listCard}
+              setListCard={setListCard}
+              key={val.games} id={val.id}
+              name={val.name}
+              cost={val.cost}
+              category={val.category}
+              resumo={val.resumo}
+            />
+
+          ))}
+        </div>
       </div>
 
-      <p>{nameVal} {costVal}</p>
-      <div class="alinhamento">
-        <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
-        <h6>Below have a list of recorded games, on click is possible edit/save, delete the datas</h6>
-        
-        {listCard.map((val) => (
+    );
+  }
 
-          <Card
-
-            listCard={listCard}
-            setListCard={setListCard}
-            key={val.games} id={val.id}
-            name={val.name}
-            cost={val.cost}
-            category={val.category}
-            resumo={val.resumo}
-          />
-
-        ))}
-      </div>
-    </div>
-
-  );
-}
