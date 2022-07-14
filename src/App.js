@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Axios from "axios";
 import Card from "./components/cards/cards";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Input } from 'reactstrap';
+
+
+import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, CardTitle, CardBody, Container } from 'reactstrap';
+
+
 
 // trabalhando com o git 2
 export default function App() {
@@ -142,55 +145,127 @@ export default function App() {
     cost: costVal,
 
   } = validations
- 
-    return (
-      <div className="container mt-4">
-        <div className="card">
-          <div className="card-body">
+  const [activeTab, setActiveTab] = useState('1');
+  return (
+    <div className="container mt-4">
+      <Nav tabs>
+        <NavItem>
+          <NavLink
+            className={activeTab == '1' ? 'active' : ''}
+            onClick={() => setActiveTab('1')}
+          >
+            Hugo Leonardo
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={activeTab == '2' ? 'active' : ''}
+            onClick={() => setActiveTab('2')}
 
-            <div class="alinhamento">
-              <h1 className="card-title text-center">Hugo´s games recorder</h1>
-              <h6>Preencha as informações para cadastrar o game</h6>
-              <h6>Fill the blanked for record the game</h6>
-              <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
-              <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-50 mt-2" onChange={handleaddValues} />
-              <Input type="text" placeholder="Categoria" name="category" className="w-50 mt-2" onChange={handleaddValues} />
-              <Input type="text" placeholder="Resumo" name="resumo" className="w-75 mt-2" onChange={handleaddValues} />
+          >
+            App CRUD
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={activeTab == '3' ? 'active' : ''}
+            onClick={() => setActiveTab('3')}
+            href='https://listafilmeshugo.herokuapp.com/'
+          >
+            Consumindo Api
+          </NavLink>
 
+        </NavItem>
+      </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          <div className="container">
+            <div className="card mt-2">
+              <div className="card-title">
 
-
+              </div>
+              <div className="card-body">
+                <img src='https://i.ibb.co/QMP57gK/Design-sem-nome-3.png' className='img-fluid shadow-4' alt='...' />
+              </div>
+              <div className="card container ml-2">
+                <b><p>Social Links:</p></b>
+                <div>
+                  <p>
+                    <b><a href='https://github.com/hugolpa'  >GitHub</a></b>
+                  </p>
+                  <p>
+                    <b><a href='https://codepen.io/huguinho' >Codepen</a></b>
+                  </p>
+                  <p>
+                    <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' >Linkedin</a></b>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="text-center mt-4">
-              <Button id="botao" type="submit" onClick={handleSubmit} className="btn-success mt-4"> Cadastrar </Button>
-            </div>
-
-            
           </div>
 
-        </div>
+        </TabPane>
+        <TabPane tabId="2">
+          <Row>
+            <Col sm="12">
 
-        <p>{nameVal} {costVal}</p>
-        <div class="alinhamento">
-          <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
-          <h6>Below have a list of recorded games, on click is possible edit/save, delete the datas</h6>
+              <div className="card">
+                <div className="card-body">
 
-          {listCard.map((val) => (
+                  <div class="alinhamento">
+                    <h1 className="card-title text-center">Hugo´s games recorder</h1>
+                    <h6>Preencha as informações para cadastrar o game</h6>
+                    <h6>Fill the blanked for record the game</h6>
+                    <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
+                    <Input type="number" placeholder="Preço" name="cost" value={cost} onBlur={validateOne} className=" w-50 mt-2" onChange={handleaddValues} />
+                    <Input type="text" placeholder="Categoria" name="category" className="w-50 mt-2" onChange={handleaddValues} />
+                    <Input type="text" placeholder="Resumo" name="resumo" className="w-75 mt-2" onChange={handleaddValues} />
 
-            <Card
 
-              listCard={listCard}
-              setListCard={setListCard}
-              key={val.games} id={val.id}
-              name={val.name}
-              cost={val.cost}
-              category={val.category}
-              resumo={val.resumo}
-            />
 
-          ))}
-        </div>
-      </div>
+                  </div>
+                  <div className="text-center mt-4">
+                    <Button id="botao" type="submit" onClick={handleSubmit} className="btn-success mt-4"> Cadastrar </Button>
+                  </div>
 
-    );
-  }
+
+                </div>
+
+              </div>
+
+              <p>{nameVal} {costVal}</p>
+              <div class="alinhamento">
+                <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
+                <h6>Below have a list of recorded games, on click is possible edit/save, delete the datas</h6>
+
+                {listCard.map((val) => (
+
+                  <Card
+
+                    listCard={listCard}
+                    setListCard={setListCard}
+                    key={val.games} id={val.id}
+                    name={val.name}
+                    cost={val.cost}
+                    category={val.category}
+                    resumo={val.resumo}
+                  />
+
+                ))}
+              </div>
+
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="3">
+          <b>Redirecionado para a aplicação...</b>
+
+
+        </TabPane>
+      </TabContent>
+
+    </div>
+
+  );
+}
 
