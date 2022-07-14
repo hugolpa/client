@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Axios from "axios";
 import Card from "./components/cards/cards";
-
+import imagem from "./components/fundo.png"
+ 
 
 import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, CardTitle, CardBody, Container } from 'reactstrap';
 
@@ -185,7 +186,8 @@ export default function App() {
 
               </div>
               <div className="card-body">
-                <img src='https://i.ibb.co/QMP57gK/Design-sem-nome-3.png' className='img-fluid shadow-4' alt='...' />
+                <img src={imagem} className='img-fluid shadow-4' alt='...' />
+                         
               </div>
               <div className="card container ml-2">
                 <b><p>Social Links:</p></b>
