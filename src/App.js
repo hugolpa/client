@@ -173,7 +173,7 @@ export default function App() {
             onClick={() => setActiveTab('3')}
             href='https://listafilmeshugo.herokuapp.com/'
           >
-            Consumindo Api
+            Consuming Api
           </NavLink>
 
         </NavItem>
