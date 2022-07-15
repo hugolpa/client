@@ -260,7 +260,7 @@ export default function App() {
           </Row>
         </TabPane>
         <TabPane tabId="3">
-          <b>Redirecionado para a aplicação...</b>
+          <b>Redirecting to the application...</b>
 
 
         </TabPane>
