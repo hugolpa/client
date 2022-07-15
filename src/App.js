@@ -153,7 +153,9 @@ export default function App() {
     <div className="container mt-4">
 
       <Nav tabs>
+
         <NavItem>
+
           <NavLink
             className={activeTab == '1' ? 'active' : ''}
             onClick={() => setActiveTab('1')}
@@ -172,21 +174,26 @@ export default function App() {
         </NavItem>
         <NavItem>
           <NavLink
-            className={activeTab == '3' ? 'active' : ''}
-            onClick={() => setActiveTab('3')}
-            href='https://listafilmeshugo.herokuapp.com/'
-          >
-            Consuming Api
-          </NavLink>
-          <NavLink
             className={activeTab == '4' ? 'active' : ''}
             onClick={() => setActiveTab('4')}
 
           >
             Medical recorder
           </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={activeTab == '3' ? 'active' : ''}
+            onClick={() => setActiveTab('3')}
+            href='https://listafilmeshugo.herokuapp.com/'
+            target="_blank"
+          >
+            Consuming Api
+          </NavLink>
+
 
         </NavItem>
+        
       </Nav>
 
       <TabContent activeTab={activeTab}>
@@ -271,7 +278,8 @@ export default function App() {
           </Row>
         </TabPane>
         <TabPane tabId="3">
-          <b>Redirecting to the application...</b>
+          <b>Redirected to the application on new tab...</b>
+          <b>There u will have access of a list of Star wars movies</b>
 
 
         </TabPane>
@@ -281,7 +289,7 @@ export default function App() {
         </TabPane>
       </TabContent>
 
-    </div>
+    </div >
 
   );
 }
