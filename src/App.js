@@ -151,6 +151,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('1');
   return (
     <div className="container mt-4">
+
       <Nav tabs>
         <NavItem>
           <NavLink
@@ -187,6 +188,7 @@ export default function App() {
 
         </NavItem>
       </Nav>
+
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
           <div className="container">
