@@ -3,7 +3,9 @@ import "./App.css";
 import Axios from "axios";
 import Card from "./components/cards/cards";
 import imagem from "./components/fundo.png"
- 
+import imagem2 from "./components/imagem2.png"
+import imagem3 from "./components/imagem3.png"
+
 
 import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, CardTitle, CardBody, Container } from 'reactstrap';
 
@@ -175,6 +177,13 @@ export default function App() {
           >
             Consuming Api
           </NavLink>
+          <NavLink
+            className={activeTab == '4' ? 'active' : ''}
+            onClick={() => setActiveTab('4')}
+
+          >
+            Medical recorder (Prontuário eletrônico)
+          </NavLink>
 
         </NavItem>
       </Nav>
@@ -187,7 +196,7 @@ export default function App() {
               </div>
               <div className="card-body">
                 <img src={imagem} className='img-fluid shadow-4' alt='...' />
-                         
+
               </div>
               <div className="card container ml-2">
                 <b><p>Social Links:</p></b>
@@ -263,6 +272,10 @@ export default function App() {
           <b>Redirecting to the application...</b>
 
 
+        </TabPane>
+        <TabPane tabId="4">
+          <img src={imagem2} className='img-fluid shadow-4' alt='...' />
+          <img src={imagem3} className='img-fluid shadow-4' alt='...' />
         </TabPane>
       </TabContent>
 
