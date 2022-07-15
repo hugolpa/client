@@ -284,6 +284,7 @@ export default function App() {
 
         </TabPane>
         <TabPane tabId="4">
+          <h2>Prints screens of the project Medical Recorder (PE)</h2>
           <img src={imagem2} className='img-fluid shadow-4' alt='...' />
           <img src={imagem3} className='img-fluid shadow-4' alt='...' />
         </TabPane>
