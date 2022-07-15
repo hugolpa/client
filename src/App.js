@@ -182,7 +182,7 @@ export default function App() {
             onClick={() => setActiveTab('4')}
 
           >
-            Medical recorder (Prontuário eletrônico)
+            Medical recorder
           </NavLink>
 
         </NavItem>
