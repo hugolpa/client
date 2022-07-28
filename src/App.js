@@ -5,15 +5,16 @@ import Card from "./components/cards/cards";
 import imagem from "./components/fundo.png"
 import imagem2 from "./components/imagem2.png"
 import imagem3 from "./components/imagem3.png"
-
-
-import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, CardTitle, CardBody, Container } from 'reactstrap';
-
-
+import imagem4 from "./components/imagem4.png"
+import imagem5 from "./components/imagem5.png"
+import imagem6 from "./components/imagem6.png"
+import imagem7 from "./components/imagem7.png"
+import imagem8 from "./components/imagem8.png"
+import imagem9 from "./components/imagem9.png"
+import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, Collapse, NavbarText } from 'reactstrap';
 
 // trabalhando com o git 2
 export default function App() {
-
 
 
   // const [values, setValues] = useState();
@@ -149,6 +150,11 @@ export default function App() {
 
   } = validations
   const [activeTab, setActiveTab] = useState('1');
+  const [isOpen, setIsOpen] = useState(false);
+  //accordion
+
+
+
   return (
     <div className="container mt-4">
 
@@ -193,36 +199,180 @@ export default function App() {
 
 
         </NavItem>
-        
+
       </Nav>
 
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          <div className="container">
-            <div className="card mt-2">
-              <div className="card-title">
+          <div class="row">
+            <div class="col-sm-6 col-lg-8">
+              <div className="container">
+                <div className="card mt-2">
 
-              </div>
-              <div className="card-body">
-                <img src={imagem} className='img-fluid shadow-4' alt='...' />
+                  <div className="card-body">
+                    <img src={imagem} className='img-fluid shadow-4' alt='...' />
 
-              </div>
-              <div className="card container ml-2">
-                <b><p>Social Links:</p></b>
-                <div>
-                  <p>
-                    <b><a href='https://github.com/hugolpa'  >GitHub</a></b>
-                  </p>
-                  <p>
-                    <b><a href='https://codepen.io/huguinho' >Codepen</a></b>
-                  </p>
-                  <p>
-                    <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' >Linkedin</a></b>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="col-6 col-lg-4 mt-2">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                      Expert in:
+
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div className="row">
+                        <div className="col-md-6 mt-3">
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              • HTML
+
+                            </li>
+                            <li class="list-group-item">
+                              • CSS
+
+                            </li>
+                            <li class="list-group-item">
+                              • Boootstrap
+                            </li>
+                            <li class="list-group-item">
+                              • Axure
+                            </li>
+
+                            <li class="list-group-item">
+                              • Bubble.io
+                            </li>
+
+                          </ul>
+                        </div>
+                        <div className="col-md-6">
+                          <img src={imagem4} className='img-fluid shadow-4' alt='...' />
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Knowledge in:
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div className="row">
+                        <div className="col-md-6 mt-3">
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              • GitHub
+
+                            </li>
+                            <li class="list-group-item">
+                              • React JS
+
+                            </li>
+                            <li class="list-group-item">
+                              • Javascript
+                            </li>
+
+                            <li class="list-group-item">
+                              • Node Js
+                            </li>
+
+                          </ul>
+                        </div>
+                        <div className="col-md-6">
+                          <img src={imagem5} className='img-fluid shadow-4' alt='...' />
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Next objectives in carreer
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div className="row">
+
+
+
+                        <div className="col-md-6">
+                          <strong>Continue on Front-end side , improving my Knowledges and grow in carreer</strong>
+                        </div>
+
+                        <div className="col-md-6">
+                          <img src={imagem6} className='img-fluid shadow-4' alt='...' />
+                        </div>
+
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingfour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Social Links
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="row">
+
+                        <b><p>Social Links:</p></b>
+                        <div class="col-md-2">
+                          <p>
+                            <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 photo" className='photo img-fluid shadow-4' alt='...' /></a></b>
+                          </p>
+
+                        </div>
+
+                        <div class="col-md-2">
+                          <p>
+                            <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 photo" className='photo img-fluid shadow-4' alt='...' /></a></b>
+                          </p>
+
+                        </div>
+                        <div class="col-md-2">
+                          <p>
+                            <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 photo" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' photo img-fluid shadow-4' alt='...' /></a></b>
+                          </p>
+
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
+
+
 
         </TabPane>
         <TabPane tabId="2">
@@ -288,10 +438,15 @@ export default function App() {
           <img src={imagem2} className='img-fluid shadow-4' alt='...' />
           <img src={imagem3} className='img-fluid shadow-4' alt='...' />
         </TabPane>
-      </TabContent>
 
-    </div >
+      </TabContent>
+    </div>
 
   );
+
 }
+
+
+
+
 
