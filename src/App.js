@@ -338,7 +338,7 @@ export default function App() {
 
                       <div class="row">
 
-                        <b><p>Social Links:</p></b>
+                        
                         <div class="col-md-2">
                           <p>
                             <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 photo" className='photo img-fluid shadow-4' alt='...' /></a></b>
