@@ -206,12 +206,23 @@ export default function App() {
         <TabPane tabId="1">
           <div class="row">
             <div class="col-sm-6 col-lg-8">
-              <div className="container">
-                <div className="card mt-2">
+              <div className="container ">
+                <div className="card mt-2 ">
 
                   <div className="card-body">
-                    <img src={imagem} className='img-fluid shadow-4' alt='...' />
-
+                    
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <img src={imagem} className='img-fluid shadow-4' alt='...'  />
+                        </div>
+                        <div class="flip-card-back">
+                          <h1>Hugo Leonardo</h1>
+                          <p>Front-End Dev</p>
+                          <p>Currently work building screens using React JS, HTML, CSS, Bootstrap, Javascript.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -338,23 +349,23 @@ export default function App() {
 
                       <div class="row">
 
-                        
+
                         <div class="col-md-2">
                           <p>
-                            <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 photo" className='photo img-fluid shadow-4' alt='...' /></a></b>
+                            <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 photo flip-icon" className='photo img-fluid shadow-4' alt='...' /></a></b>
                           </p>
 
                         </div>
 
                         <div class="col-md-2">
                           <p>
-                            <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 photo" className='photo img-fluid shadow-4' alt='...' /></a></b>
+                            <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 photo flip-icon2" className='photo img-fluid shadow-4' alt='...' /></a></b>
                           </p>
 
                         </div>
                         <div class="col-md-2">
                           <p>
-                            <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 photo" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' photo img-fluid shadow-4' alt='...' /></a></b>
+                            <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 photo flip-icon2" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' photo img-fluid shadow-4' alt='...' /></a></b>
                           </p>
 
                         </div>
