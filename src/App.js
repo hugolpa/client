@@ -205,39 +205,30 @@ export default function App() {
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
           <div class="row">
-            <div class="col-sm-6 col-lg-8">
+            <div class="col-sm-4 col-md-6 col-lg-8">
               <div className="container ">
-                <div className="card mt-2 ">
+                <div className="card circle pulse rose mt-2 " >
 
                   <div className="card-body">
-                    
-                    <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                        <img src={imagem} className='img-fluid shadow-4' alt='...'  />
-                        </div>
-                        <div class="flip-card-back">
-                          <h1>Hugo Leonardo</h1>
-                          <p>Front-End Dev</p>
-                          <p>Currently work building screens using React JS, HTML, CSS, Bootstrap, Javascript.</p>
-                        </div>
-                      </div>
-                    </div>
+                    <img src={imagem} className='img-fluid shadow-4' alt='...' />
+                    <h1>Hi, I am Hugo Leonardo</h1>
+                    <h2>Front-End Dev</h2>
+                    <p>Currently work building screens using React JS, HTML, CSS, Bootstrap, Javascript.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6 col-lg-4 mt-2">
-              <div class="accordion" id="accordionExample">
+            <div class="col-mr-6  col-lg-4 mt-2">
+              <div class="accordion circle pulse rose " id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 
                       Expert in:
 
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <div className="row">
                         <div className="col-md-6 mt-3">
@@ -264,7 +255,7 @@ export default function App() {
                           </ul>
                         </div>
                         <div className="col-md-6">
-                          <img src={imagem4} className='img-fluid shadow-4' alt='...' />
+                          <img src={imagem4} class=' img shadow-4' alt='...' />
                         </div>
                       </div>
 
