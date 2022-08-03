@@ -11,6 +11,7 @@ import imagem6 from "./components/imagem6.png"
 import imagem7 from "./components/imagem7.png"
 import imagem8 from "./components/imagem8.png"
 import imagem9 from "./components/imagem9.png"
+import imagem12 from "./components/imagem12.png"
 import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, Collapse, NavbarText } from 'reactstrap';
 
 // trabalhando com o git 2
@@ -205,15 +206,22 @@ export default function App() {
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
           <div class="row">
-            <div class="col-sm-4 col-md-6 col-lg-8">
+            <div class="col-sm-4 col-md-6 col-lg-8 ">
               <div className="container ">
-                <div className="card circle pulse rose mt-2 " >
+                <div className="card circle pulse rose mt-2 "  >
 
-                  <div className="card-body">
-                    <img src={imagem} className='img-fluid shadow-4' alt='...' />
-                    <h1>Hi, I am Hugo Leonardo</h1>
-                    <h2>Front-End Dev</h2>
-                    <p>Currently work building screens using React JS, HTML, CSS, Bootstrap, Javascript.</p>
+                  <div className="card-body  " >
+                    <div class="row" >
+                      <div class="col-md-8 col-sm-2 ">
+                        <h1>Hi, I am Hugo Leonardo</h1>
+                        <h2>Front-End Dev</h2>
+                        <p class="mt-4">Currently work building screens <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
+                      </div>
+                      <div class="col-md-4  fundo1 ">
+
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -222,7 +230,7 @@ export default function App() {
               <div class="accordion circle pulse rose " id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
                       Expert in:
 
@@ -254,8 +262,8 @@ export default function App() {
 
                           </ul>
                         </div>
-                        <div className="col-md-6">
-                          <img src={imagem4} class=' img shadow-4' alt='...' />
+                        <div className="col-md-4 col-sm-2">
+                          <img src={imagem4} className=' img-fluid shadow-4' alt='...' />
                         </div>
                       </div>
 
@@ -292,7 +300,7 @@ export default function App() {
 
                           </ul>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-4 col-sm-2">
                           <img src={imagem5} className='img-fluid shadow-4' alt='...' />
                         </div>
                       </div>
@@ -340,28 +348,16 @@ export default function App() {
 
                       <div class="row">
 
-
-                        <div class="col-md-2">
-                          <p>
-                            <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 photo flip-icon" className='photo img-fluid shadow-4' alt='...' /></a></b>
-                          </p>
-
+                        <div class="icone col-md-2 col-sm-1">
+                          <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 icone " className=' img-fluid shadow-4' alt='...' /></a></b>
                         </div>
 
-                        <div class="col-md-2">
-                          <p>
-                            <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 photo flip-icon2" className='photo img-fluid shadow-4' alt='...' /></a></b>
-                          </p>
-
+                        <div class="icone col-md-2 col-sm-1">
+                          <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2  " className=' img-fluid shadow-4' alt='...' /></a></b>
                         </div>
-                        <div class="col-md-2">
-                          <p>
-                            <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 photo flip-icon2" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' photo img-fluid shadow-4' alt='...' /></a></b>
-                          </p>
-
+                        <div class="icone col-md-2 col-sm-1">
+                          <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 icone" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' img-fluid shadow-4' alt='...' /></a></b>
                         </div>
-
-
                       </div>
                     </div>
                   </div>
@@ -442,6 +438,7 @@ export default function App() {
         </TabPane>
 
       </TabContent>
+
     </div>
 
   );
