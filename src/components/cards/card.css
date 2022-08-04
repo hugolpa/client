@@ -1,8 +1,15 @@
 @import url('http://fonts.cdnfonts.com/css/haarlem-sans');
-body{
+
+body {
   font-family: 'Haarlem Sans', sans-serif;
-                                                
+
 }
+
+h1 {
+  texte-shadow: red -2px 0,
+    cyan 2px 0;
+}
+
 .card-container {
   /* width: 550px;*/
   background-color: aliceblue;
@@ -11,7 +18,7 @@ body{
   margin: 10px;
   padding: 5px;
   cursor: pointer;
-  
+
 }
 
 .card-id {
