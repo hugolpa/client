@@ -217,7 +217,7 @@ export default function App() {
                         <h2>Front-End Dev</h2>
                         <p class="mt-4">Currently work building screens <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
                       </div>
-                      <div class="col-md-4  fundo1 ">
+                      <div class="col-md-4   fundo1 ">
 
                       </div>
                     </div>
