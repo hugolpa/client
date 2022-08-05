@@ -263,7 +263,8 @@ export default function App() {
                           </ul>
                         </div>
                         <div className="col-md-4 col-sm-2">
-                          <img src={imagem4} className=' img-fluid shadow-4' alt='...' />
+                          <img src={imagem4} class="d-none d-lg-block d-print-block img-fluid shadow-4"  />
+                          
                         </div>
                       </div>
 
@@ -301,7 +302,7 @@ export default function App() {
                           </ul>
                         </div>
                         <div className="col-md-4 col-sm-2">
-                          <img src={imagem5} className='img-fluid shadow-4' alt='...' />
+                          <img src={imagem5} class="d-none d-lg-block d-print-block img-fluid shadow-4" />
                         </div>
                       </div>
 
@@ -349,14 +350,14 @@ export default function App() {
                       <div class="row">
 
                         <div class="icone col-md-2 col-sm-1">
-                          <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 icone " className=' img-fluid shadow-4' alt='...' /></a></b>
+                          <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 icone img-fluid shadow-4 "  /></a></b>
                         </div>
 
                         <div class="icone col-md-2 col-sm-1">
-                          <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2  " className=' img-fluid shadow-4' alt='...' /></a></b>
+                          <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 icone img-fluid shadow-4 ml-2 " /></a></b>
                         </div>
                         <div class="icone col-md-2 col-sm-1">
-                          <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 icone" href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" className=' img-fluid shadow-4' alt='...' /></a></b>
+                          <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 icone img-fluid shadow-4 ml-2 " href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/"  /></a></b>
                         </div>
                       </div>
                     </div>
