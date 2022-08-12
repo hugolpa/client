@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Axios from "axios";
 import Card from "./components/cards/cards";
-import imagem from "./components/fundo.png"
 import imagem2 from "./components/imagem2.png"
 import imagem3 from "./components/imagem3.png"
 import imagem4 from "./components/imagem4.png"
@@ -11,12 +10,11 @@ import imagem6 from "./components/imagem6.png"
 import imagem7 from "./components/imagem7.png"
 import imagem8 from "./components/imagem8.png"
 import imagem9 from "./components/imagem9.png"
-import imagem12 from "./components/imagem12.png"
+import Transition from 'react-motion-ui-pack'
 import { Button, Input, Nav, NavItem, TabContent, TabPane, NavLink, Row, Col, Collapse, NavbarText } from 'reactstrap';
 
 // trabalhando com o git 2
 export default function App() {
-
 
   // const [values, setValues] = useState();
   const [listCard, setListCard] = useState([]);
@@ -175,6 +173,7 @@ export default function App() {
             className={activeTab == '2' ? 'active' : ''}
             onClick={() => setActiveTab('2')}
 
+
           >
             App CRUD
           </NavLink>
@@ -205,20 +204,20 @@ export default function App() {
 
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          <div class="row">
+          <div class="row   ">
             <div class="col-sm-4 col-md-6 col-lg-8 ">
-              <div className="container ">
-                <div className="card circle pulse rose mt-2 "  >
+              <div className="container  ">
+                <div className="card  mt-2 "  >
 
-                  <div className="card-body  " >
+                  <div className="card-body " >
                     <div class="row" >
-                      <div class="col-md-8 col-sm-2 ">
+                      <div class="col-md-8 col-sm-2  ">
                         <h1>Hi, I am Hugo Leonardo</h1>
                         <h2>Front-End Dev</h2>
                         <p class="mt-4">Currently work building screens <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
                       </div>
-                      <div class="col-md-4   fundo1 ">
-
+                      <div class="col-md-4 thing  fundo1 ">
+                        
                       </div>
                     </div>
 
@@ -227,10 +226,10 @@ export default function App() {
               </div>
             </div>
             <div class="col-mr-6  col-lg-4 mt-2">
-              <div class="accordion circle pulse rose " id="accordionExample">
+              <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h2 class="accordion-header pulse" id="headingOne">
+                    <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
                       Expert in:
 
@@ -263,8 +262,8 @@ export default function App() {
                           </ul>
                         </div>
                         <div className="col-md-4 col-sm-2">
-                          <img src={imagem4} class="d-none d-lg-block d-print-block img-fluid shadow-4"  />
-                          
+                          <img src={imagem4} class="d-none d-lg-block d-print-block img-fluid shadow-4" />
+
                         </div>
                       </div>
 
@@ -273,7 +272,7 @@ export default function App() {
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
+                  <h2 class="accordion-header pulse" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Knowledge in:
                     </button>
@@ -311,7 +310,7 @@ export default function App() {
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
+                  <h2 class="accordion-header pulse" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Next objectives in carreer
                     </button>
@@ -339,7 +338,7 @@ export default function App() {
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingfour">
+                  <h2 class="accordion-header pulse" id="headingfour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                       Social Links
                     </button>
@@ -350,14 +349,14 @@ export default function App() {
                       <div class="row">
 
                         <div class="icone col-md-2 col-sm-1">
-                          <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 icone img-fluid shadow-4 "  /></a></b>
+                          <b><a href='https://github.com/hugolpa' target="_blank"> <img src={imagem7} class="ml-2 icone img-fluid shadow-4 " /></a></b>
                         </div>
 
                         <div class="icone col-md-2 col-sm-1">
                           <b><a href='https://codepen.io/huguinho' target="_blank" > <img src={imagem9} class="ml-2 icone img-fluid shadow-4 ml-2 " /></a></b>
                         </div>
                         <div class="icone col-md-2 col-sm-1">
-                          <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 icone img-fluid shadow-4 ml-2 " href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/"  /></a></b>
+                          <b><a href='https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/' target="_blank" > <img src={imagem8} class="ml-2 icone img-fluid shadow-4 ml-2 " href="https://www.linkedin.com/in/hugo-leonardo-p-a-495a40233/" /></a></b>
                         </div>
                       </div>
                     </div>
@@ -433,12 +432,13 @@ export default function App() {
 
         </TabPane>
         <TabPane tabId="4">
-          <h2>Prints screens of the project Medical Recorder (PE)</h2>
+          <h1>Prints screens of the project Medical Recorder (PE)</h1>
           <img src={imagem2} className='img-fluid shadow-4' alt='...' />
           <img src={imagem3} className='img-fluid shadow-4' alt='...' />
         </TabPane>
 
       </TabContent>
+      
 
     </div>
 
