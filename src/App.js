@@ -191,8 +191,7 @@ export default function App() {
           <NavLink
             className={activeTab == '3' ? 'active' : ''}
             onClick={() => setActiveTab('3')}
-            href='https://listafilmeshugo.herokuapp.com/'
-            target="_blank"
+            
           >
             App 3 Consuming Api
           </NavLink>
@@ -204,7 +203,7 @@ export default function App() {
 
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          
+
           <div class="row   ">
             <div class="col-sm-9 col-md-6 col-lg-8 ">
               <div className="container  ">
@@ -228,9 +227,9 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             <div class="col-md-6  col-lg-4  mt-2">
-            
+
               <div class="accordion" id="accordionExample">
 
                 <div class="accordion-item">
@@ -371,11 +370,11 @@ export default function App() {
                 </div>
 
               </div>
-              
+
             </div>
-            
+
           </div>
-          
+
         </TabPane>
         <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
         <TabPane tabId="2">
@@ -383,7 +382,7 @@ export default function App() {
             <Col sm="12">
 
               <div className="card">
-                
+
                 <div className="card-body">
 
                   <div class="alinhamento">
@@ -433,10 +432,9 @@ export default function App() {
           </Row>
         </TabPane>
         <TabPane tabId="3">
-          <b>Redirected to the application on new tab...</b>
-          <b>There u will have access of a list of Star wars movies</b>
+          
           <a class="github-btn" target="_blank" href="https://github.com/hugolpa/consumindo-api-react">See on GitHub</a>
-
+          <iframe  src="https://listafilmeshugo.herokuapp.com/" width="100%" height="2000 px">...</iframe>
 
         </TabPane>
         <TabPane tabId="4">
