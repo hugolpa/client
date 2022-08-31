@@ -175,7 +175,7 @@ export default function App() {
 
 
           >
-            App CRUD
+            App 1 CRUD
           </NavLink>
         </NavItem>
         <NavItem>
@@ -184,7 +184,7 @@ export default function App() {
             onClick={() => setActiveTab('4')}
 
           >
-            Medical recorder
+            App 2 Screen shot Medical Recorder
           </NavLink>
         </NavItem>
         <NavItem>
@@ -194,7 +194,7 @@ export default function App() {
             href='https://listafilmeshugo.herokuapp.com/'
             target="_blank"
           >
-            Consuming Api
+            App 3 Consuming Api
           </NavLink>
 
 
@@ -204,6 +204,7 @@ export default function App() {
 
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
+          <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
           <div class="row   ">
             <div class="col-sm-4 col-md-6 col-lg-8 ">
               <div className="container  ">
@@ -214,11 +215,13 @@ export default function App() {
                       <div class="col-md-8 col-sm-2  ">
                         <h1>Hi, I am Hugo Leonardo</h1>
                         <h2>Front-End Dev</h2>
-                        <p class="mt-4">Currently work building screens <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
+                        <p class="mt-4">Currently work building screens. <br /><br /> In next tabs you can see some aplications <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
                       </div>
                       <div class="col-md-4 thing  fundo1 ">
-                        
+
                       </div>
+
+
                     </div>
 
                   </div>
@@ -226,8 +229,11 @@ export default function App() {
               </div>
             </div>
             <div class="col-mr-6  col-lg-4 mt-2">
+
               <div class="accordion" id="accordionExample">
+
                 <div class="accordion-item">
+
                   <h2 class="accordion-header pulse" id="headingOne">
                     <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
@@ -376,12 +382,13 @@ export default function App() {
         <TabPane tabId="2">
           <Row>
             <Col sm="12">
-
+              <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
               <div className="card">
                 <div className="card-body">
 
                   <div class="alinhamento">
                     <h1 className="card-title text-center">Hugo´s games recorder</h1>
+                    <h2>Aplication using API request</h2>
                     <h6>Preencha as informações para cadastrar o game</h6>
                     <h6>Fill the blanked for record the game</h6>
                     <Input type="text" name="name" value={name} onBlur={validateOne} placeholder="Nome" required="required" className=" w-50 mt-2 " onChange={handleaddValues} />
@@ -428,17 +435,20 @@ export default function App() {
         <TabPane tabId="3">
           <b>Redirected to the application on new tab...</b>
           <b>There u will have access of a list of Star wars movies</b>
+          <a class="github-btn" target="_blank" href="https://github.com/hugolpa/consumindo-api-react">See on GitHub</a>
 
 
         </TabPane>
         <TabPane tabId="4">
           <h1>Prints screens of the project Medical Recorder (PE)</h1>
+          <a class="github-btn" target="_blank" href="https://github.com/hugolpa/medical_record">See on GitHub</a>
           <img src={imagem2} className='img-fluid shadow-4' alt='...' />
           <img src={imagem3} className='img-fluid shadow-4' alt='...' />
+
         </TabPane>
 
       </TabContent>
-      
+
 
     </div>
 
