@@ -204,20 +204,20 @@ export default function App() {
 
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
+          
           <div class="row   ">
-            <div class="col-sm-4 col-md-6 col-lg-8 ">
+            <div class="col-sm-9 col-md-6 col-lg-8 ">
               <div className="container  ">
                 <div className="card  mt-2 "  >
 
                   <div className="card-body " >
                     <div class="row" >
-                      <div class="col-md-8 col-sm-2  ">
+                      <div class="col-md-8 col-sm-8 col-lg-8  ">
                         <h1>Hi, I am Hugo Leonardo</h1>
                         <h2>Front-End Dev</h2>
                         <p class="mt-4">Currently work building screens. <br /><br /> In next tabs you can see some aplications <br /><br />using React JS, HTML, CSS, Bootstrap, Javascript.</p>
                       </div>
-                      <div class="col-md-4 thing  fundo1 ">
+                      <div class="col-md-4 col-sm-8 thing  fundo1 ">
 
                       </div>
 
@@ -228,8 +228,9 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div class="col-mr-6  col-lg-4 mt-2">
-
+            
+            <div class="col-md-6  col-lg-4  mt-2">
+            
               <div class="accordion" id="accordionExample">
 
                 <div class="accordion-item">
@@ -370,15 +371,13 @@ export default function App() {
                 </div>
 
               </div>
-
+              
             </div>
-
+            
           </div>
-
-
-
-
+          
         </TabPane>
+        <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
         <TabPane tabId="2">
           <Row>
             <Col sm="12">

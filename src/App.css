@@ -174,9 +174,9 @@ img {
 
 /* github botão*/
 .github-btn {
-  position: absolute;
+  position: fixed;
   right: 40px;
-  bottom: 50px;
+  bottom: 20px;
   text-decoration: none;
   padding: 15px 25px;
   border-radius: 4px;
