@@ -382,8 +382,9 @@ export default function App() {
         <TabPane tabId="2">
           <Row>
             <Col sm="12">
-              <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
+
               <div className="card">
+                
                 <div className="card-body">
 
                   <div class="alinhamento">
@@ -407,7 +408,7 @@ export default function App() {
                 </div>
 
               </div>
-
+              <a class="github-btn" target="_blank" href="https://github.com/hugolpa/client">See on GitHub</a>
               <p>{nameVal} {costVal}</p>
               <div class="alinhamento">
                 <h6>Abaixo está a lista de games cadastrados, ao clicar é possível editar/salvar, excluir os dados:</h6>
